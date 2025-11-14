@@ -401,8 +401,7 @@ footer {
 .footer .container {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
-  gap: 120px;
+  gap: 80px;
 }
 .footer-info {
   width: 264px;
@@ -457,6 +456,19 @@ footer {
   height: 20px;
   margin-left: 8px;
 }
+.subscribe-btn {
+  background-color: #4d5ae5;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0 24px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  gap: 8px;
+  margin: 0 auto;
+}
 
 .subscribe {
   display: flex;
@@ -466,11 +478,26 @@ footer {
   border-radius: 4px;
 }
 
+.email-form input[type="email"] {
+  background-color: #2e2f42;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.email-form input::placeholder {
+  color: #e7e9fc;
+}
+
 .email-form {
   display: flex;
-  width: 264px;
-  height: 40px;
-  gap: 24px;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
 }
 
 .is-open {
@@ -486,10 +513,10 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  display: none;
 }
 
 .modal-content {
+  position: relative;
   background-color: #fff;
   padding: 30px;
   border-radius: 4px;
@@ -499,13 +526,16 @@ footer {
 .modal-title {
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  margin-top: 40px;
+  text-align: center;
 }
 
 label {
   display: block;
   margin-bottom: 4px;
-  font-size: 14px;
+  font-size: 12px;
+  color: #8e8f99;
 }
 
 .input-wrapper {
@@ -515,49 +545,52 @@ label {
 
 .input-wrapper .icon {
   position: absolute;
-  left: 10px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
   width: 18px;
   height: 18px;
-  fill: #4f5ef5; /* ikon rengi */
 }
 
 .input-wrapper input {
   width: 100%;
-  padding: 8px 8px 8px 36px; /* ikon için sol boşluk */
+  padding: 8px 8px 8px 36px;
   font-family: inherit;
-  border: 1px solid #4f5ef5;
+  border: 1px solid #2e2f4266;
   border-radius: 4px;
+  font-size: 12px;
 }
 
 textarea {
   width: 100%;
-  height: 80px;
-  padding: 8px;
-  border: 1px solid #4f5ef5;
+  height: 120px;
+  padding: 12px;
+  border: 1px solid #2e2f4266;
   border-radius: 4px;
+  margin-bottom: 16px;
   resize: none;
-  font-family: inherit;
+  font-size: 12px;
 }
 
 .checkbox {
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: 14px;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 .send-btn {
   display: block;
-  padding: 16px 40px;
+  height: 56px;
+  padding: 0 40px;
   background-color: #4f5ef5;
   color: #fff;
   border: none;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .send-btn:hover {
@@ -570,11 +603,32 @@ textarea {
 }
 
 .close-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   background-color: #e7e9fc;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+  outline: none;
+  border-color: #4d5ae5;
+  box-shadow: 0 0 0 0px #4d5ae5;
+}
+
+.close-button:hover {
+  background-color: #4d5ae5;
+}
+
+.close-button:hover .icon-close-black {
+  fill: #ffffff;
 }
