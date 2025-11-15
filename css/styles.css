@@ -513,6 +513,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 .modal-content {
@@ -595,6 +596,7 @@ textarea {
 
 .send-btn:hover {
   background-color: #3b4cd1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close-black {
@@ -623,12 +625,30 @@ textarea:active {
   outline: none;
   border-color: #4d5ae5;
   box-shadow: 0 0 0 0px #4d5ae5;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-button:hover {
   background-color: #4d5ae5;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-button:hover .icon-close-black {
   fill: #ffffff;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-wrapper:hover .icon {
+  color: #4d5ae5;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-wrapper:focus-within .icon {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #4d5ae5;
+}
+
+.input-wrapper:focus-within {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: #4d5ae5;
 }
